@@ -1,4 +1,5 @@
 import NameTitle from './components/NameTitle';
+import SubNavBar from './components/SubNavBar';
 import TypeWritter from './components/TypeWritter';
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <div className='flex flex-col justify-center items-center h-[70vh]'>
         <NameTitle text="Hi, I'm Emmy." />
         <TypeWritter text="I'm a Frontend Developer." delay={200} />
+        <SubNavBar />
       </div>
     </main>
   );
