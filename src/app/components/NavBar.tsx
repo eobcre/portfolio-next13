@@ -6,31 +6,31 @@ const NavBar = () => {
     {
       id: nanoid(),
       name: 'Home',
-      url: '/',
+      href: '/',
       background: 'bg-[#97dffc]',
     },
     {
       id: nanoid(),
       name: 'About',
-      url: '/about',
+      href: '/about',
       background: 'bg-[#858ae3]',
     },
     {
       id: nanoid(),
       name: 'Gallery',
-      url: '/gallery',
+      href: '/gallery',
       background: 'bg-[#613dc1]',
     },
     {
       id: nanoid(),
       name: 'Contact',
-      url: '/contact',
+      href: '/contact',
       background: 'bg-[#4e148c]',
     },
     {
       id: nanoid(),
       name: 'Resume',
-      url: '/resume',
+      href: '/resume',
       background: 'bg-[#2c0735]',
     },
   ];
@@ -39,7 +39,7 @@ const NavBar = () => {
     <nav>
       <ul className='flex justify-center'>
         {navMenuData.map((menu, index) => (
-          <Link key={menu.id} href={menu.url}>
+          <Link key={menu.id} href={menu.href}>
             <li
               className={`flex justify-center items-center text-white text-lg tracking-wide w-[130px] h-[130px] ${
                 menu.background
