@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <div>&copy; 2023 Emmy Manning</div>;
+  return <div>&copy; {new Date().getFullYear()} Emmy Manning</div>;
 };
 
 export default Footer;
