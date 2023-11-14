@@ -1,15 +1,10 @@
-import NameTitle from './components/NameTitle';
-import SubNavBar from './components/SubNavBar';
-import TypeWritter from './components/TypeWritter';
+// components
+import HeroSection from './components/HeroSection';
 
 export default function Home() {
   return (
     <main>
-      <div className='flex flex-col justify-center items-center h-[70vh]'>
-        <NameTitle text="Hi, I'm Emmy." />
-        <TypeWritter text="I'm a Frontend Developer." delay={200} />
-        <SubNavBar />
-      </div>
+      <HeroSection />
     </main>
   );
 }
