@@ -8,7 +8,7 @@ const SubNavBar = () => {
     {
       id: nanoid(),
       icon: (
-        <BsLinkedin className='text-white text-3xl hover:text-[#97dffc] duration-500' />
+        <BsLinkedin className='text-[#303030] text-3xl hover:text-[#ffc971] duration-500' />
       ),
       href: 'https://www.linkedin.com/in/emmymanning',
       target: '_blank',
@@ -17,7 +17,7 @@ const SubNavBar = () => {
     {
       id: nanoid(),
       icon: (
-        <BsGithub className='text-white text-3xl hover:text-[#97dffc] duration-500' />
+        <BsGithub className='text-[#303030] text-3xl hover:text-[#ffc971] duration-500' />
       ),
       href: 'https://github.com/eobcre',
       target: '_blank',
@@ -26,7 +26,7 @@ const SubNavBar = () => {
     {
       id: nanoid(),
       icon: (
-        <HiOutlineMail className='text-white text-4xl hover:text-[#97dffc] duration-500' />
+        <HiOutlineMail className='text-[#303030] text-3xl hover:text-[#ffc971] duration-500' />
       ),
       href: 'mailto:eobcre@gmail.com',
     },

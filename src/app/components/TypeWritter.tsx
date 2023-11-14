@@ -33,7 +33,7 @@ const TypeWritter: React.FC<TypeWritterProps> = ({ text, delay }) => {
 
   return (
     <>
-      <span className='custom-text text-3xl p-4 md:text-6xl'>
+      <span className='custom-text text-4xl p-4 md:text-7xl'>
         {currentText}
         <span className={isCursorVisible ? 'cursor' : ''}>|</span>
       </span>
