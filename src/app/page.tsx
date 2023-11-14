@@ -1,10 +1,10 @@
 // components
-import HeroSection from './components/HeroSection';
+import HeroSectionLightTheme from './components/HeroSectionLightTheme';
 
 export default function Home() {
   return (
     <main>
-      <HeroSection />
+      <HeroSectionLightTheme />
     </main>
   );
 }
