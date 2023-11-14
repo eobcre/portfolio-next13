@@ -41,7 +41,7 @@ const NavBar = () => {
         {navMenuData.map((menu, index) => (
           <Link key={menu.id} href={menu.href}>
             <li
-              className={`flex justify-center items-center text-white text-lg tracking-wide w-[130px] h-[130px] ${
+              className={`flex justify-center items-center text-white text-lg font-bold tracking-wide w-[130px] h-[130px] ${
                 menu.background
               } ${
                 index === 0
