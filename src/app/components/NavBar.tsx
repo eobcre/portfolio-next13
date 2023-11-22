@@ -7,7 +7,7 @@ const NavBar = () => {
       id: nanoid(),
       name: 'Home',
       href: '/',
-      background: 'bg-[#97dffc] hover:text-[#2c0735] duration-500',
+      background: 'bg-[#97dffc] hover:text-[#4e148c] duration-500',
     },
     {
       id: nanoid(),
@@ -25,7 +25,7 @@ const NavBar = () => {
       id: nanoid(),
       name: 'Contact',
       href: '/contact',
-      background: 'bg-[#4e148c] hover:text-[#858ae3] duration-500',
+      background: 'bg-[#4e148c] hover:text-[#97dffc] duration-500',
     },
   ];
 
