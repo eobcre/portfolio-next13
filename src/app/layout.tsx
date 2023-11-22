@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body suppressHydrationWarning={true} className={inter.className}>
-        <main className='bg-[#0D1225] w-full h-screen'>
+        <main className='flex justify-between bg-[#0D1225] w-full min-h-screen'>
           <NavBar />
           {children}
         </main>

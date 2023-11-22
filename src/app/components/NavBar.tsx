@@ -27,17 +27,11 @@ const NavBar = () => {
       href: '/contact',
       background: 'bg-[#4e148c] hover:text-[#858ae3] duration-500',
     },
-    {
-      id: nanoid(),
-      name: 'Resume',
-      href: '/resume',
-      background: 'bg-[#2c0735] hover:text-[#97dffc] duration-500',
-    },
   ];
 
   return (
-    <nav>
-      <ul className='flex justify-center'>
+    <nav className='fixed top-1/2 transform -translate-y-1/2 right-0'>
+      <ul className='flex flex-col'>
         {navMenuData.map((menu, index) => (
           <Link key={menu.id} href={menu.href}>
             <li
@@ -45,9 +39,9 @@ const NavBar = () => {
                 menu.background
               } ${
                 index === 0
-                  ? 'rounded-bl-lg'
+                  ? 'rounded-tl-lg'
                   : index === navMenuData.length - 1
-                  ? 'rounded-br-lg'
+                  ? 'rounded-bl-lg'
                   : ''
               }`}
             >
