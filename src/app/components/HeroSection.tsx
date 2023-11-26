@@ -2,6 +2,7 @@
 import NameTitle from './NameTitle';
 import TypeWritter from './TypeWritter';
 import SubNavBar from './SubNavBar';
+import Description from './Description';
 
 const HeroSection = () => {
   return (
@@ -9,10 +10,7 @@ const HeroSection = () => {
       <NameTitle text="Hi, I'm Emmy." />
       <TypeWritter text='Frontend Developer.' delay={200} />
       <SubNavBar />
-      <div className='text-[#333333] text-7xl font-bold p-4'>
-        <p>Dive into Creativity</p>
-        <p>Lorem Lorem Lorem Lorem</p>
-      </div>
+      <Description />
     </div>
   );
 };
