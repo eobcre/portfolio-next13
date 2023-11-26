@@ -32,7 +32,7 @@ const SubNavBar = () => {
 
   return (
     <nav>
-      <ul className='flex gap-5 p-4'>
+      <ul className='flex gap-5 py-4'>
         {subNavMenuData.map((menu) => (
           <Link
             key={menu.id}
