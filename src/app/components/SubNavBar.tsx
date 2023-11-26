@@ -25,9 +25,7 @@ const SubNavBar = () => {
     },
     {
       id: nanoid(),
-      icon: (
-        <HiOutlineMail className='text-white text-4xl' />
-      ),
+      icon: <HiOutlineMail className='text-white text-4xl' />,
       href: 'mailto:eobcre@gmail.com',
     },
   ];
@@ -42,7 +40,9 @@ const SubNavBar = () => {
             target={menu.target}
             rel={menu.rel}
           >
-            <li className='flex justify-center items-center border-2 border-solid border-white rounded-full w-[60px] h-[60px]'>{menu.icon}</li>
+            <li className='flex justify-center items-center hover:opacity-70 hover:duration-500 border-2 border-solid border-white rounded-full w-[60px] h-[60px]'>
+              {menu.icon}
+            </li>
           </Link>
         ))}
       </ul>
