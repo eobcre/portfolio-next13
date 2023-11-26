@@ -5,7 +5,7 @@ type NameTitleProps = {
 const NameTitle: React.FC<NameTitleProps> = ({ text }) => {
   return (
     <>
-      <span className='text-white text-2xl font-bold p-4 min-[970px]:text-6xl'>{text}</span>
+      <span className='text-white text-4xl font-bold py-4 xs:text-5xl sm:text-5xl md:text-6xl'>{text}</span>
     </>
   );
 };
