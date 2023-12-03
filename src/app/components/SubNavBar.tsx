@@ -7,18 +7,14 @@ const SubNavBar = () => {
   const subNavMenuData = [
     {
       id: nanoid(),
-      icon: (
-        <BsLinkedin className='text-white text-3xl' />
-      ),
+      icon: <BsLinkedin className='text-white text-3xl' />,
       href: 'https://www.linkedin.com/in/emmymanning',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
       id: nanoid(),
-      icon: (
-        <BsGithub className='text-white text-3xl' />
-      ),
+      icon: <BsGithub className='text-white text-3xl' />,
       href: 'https://github.com/eobcre',
       target: '_blank',
       rel: 'noopener noreferrer',
@@ -40,7 +36,7 @@ const SubNavBar = () => {
             target={menu.target}
             rel={menu.rel}
           >
-            <li className='flex justify-center items-center hover:opacity-70 hover:duration-500 border-2 border-solid border-white rounded-full w-[60px] h-[60px]'>
+            <li className='flex justify-center items-center border-2 hover:border-4 hover:border-white rounded-full cursor-pointer w-[60px] h-[60px]'>
               {menu.icon}
             </li>
           </Link>

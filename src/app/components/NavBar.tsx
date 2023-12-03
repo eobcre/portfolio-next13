@@ -7,25 +7,25 @@ const NavBar = () => {
       id: nanoid(),
       name: 'Home',
       href: '/',
-      background: 'bg-[#97dffc] hover:text-[#4e148c] duration-500',
+      background: 'bg-[#97dffc]',
     },
     {
       id: nanoid(),
       name: 'About',
       href: '/about',
-      background: 'bg-[#858ae3] hover:text-[#613dc1] duration-500',
+      background: 'bg-[#858ae3]',
     },
     {
       id: nanoid(),
       name: 'Gallery',
       href: '/gallery',
-      background: 'bg-[#613dc1] hover:text-[#858ae3] duration-500',
+      background: 'bg-[#613dc1]',
     },
     {
       id: nanoid(),
       name: 'Contact',
       href: '/contact',
-      background: 'bg-[#4e148c] hover:text-[#97dffc] duration-500',
+      background: 'bg-[#4e148c]',
     },
   ];
 
@@ -35,7 +35,7 @@ const NavBar = () => {
         {navMenuData.map((menu, index) => (
           <Link key={menu.id} href={menu.href}>
             <li
-              className={`flex justify-center items-center text-white text-lg font-bold tracking-wide rounded-full mb-4 w-[110px] h-[110px] ${
+              className={`flex justify-center items-center text-white text-lg font-bold tracking-wide rounded-full duration-1000 hover:rotate-[360deg] cursor-pointer mb-4 w-[110px] h-[110px] ${
                 menu.background
               }`}
             >

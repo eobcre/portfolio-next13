@@ -15,6 +15,7 @@ const config: Config = {
       lg: '1129px',
       xl: '1280px',
       '2xl': '1440px',
+      '4xl': '1980px',
       '6xl': '2560px',
     },
   },
