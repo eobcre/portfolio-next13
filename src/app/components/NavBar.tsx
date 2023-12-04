@@ -1,5 +1,9 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { nanoid } from 'nanoid';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
 const NavBar = () => {
   const navMenuData = [
@@ -29,21 +33,37 @@ const NavBar = () => {
     },
   ];
 
+  const [navbar, setNavbar] = useState(false);
+
+  const toggleNav = () => {
+    setNavbar((prev) => !prev);
+  };
+
   return (
-    <nav className='fixed top-1/2 transform -translate-y-1/2 right-0 p-4'>
-      <ul className='flex flex-col'>
-        {navMenuData.map((menu, index) => (
-          <Link key={menu.id} href={menu.href}>
-            <li
-              className={`flex justify-center items-center text-white text-lg font-bold tracking-wide rounded-full duration-1000 hover:rotate-[360deg] cursor-pointer mb-4 w-[110px] h-[110px] ${
-                menu.background
-              }`}
-            >
-              {menu.name}
-            </li>
-          </Link>
-        ))}
-      </ul>
+    <nav className='fixed md:top-1/2 md:transform md:-translate-y-1/2 right-0 p-4'>
+      <div className='text-right md:hidden'>
+        <button onClick={toggleNav}>
+          {navbar ? (
+            <RiCloseLine className='text-white text-4xl border-2 border-white rounded-full hover:rotate-[360deg] hover:duration-1000 w-[60px] h-[60px] p-2' />
+          ) : (
+            <RiMenu3Line className='text-white text-4xl border-2 border-white rounded-full hover:rotate-[360deg] hover:duration-1000 w-[60px] h-[60px] p-3' />
+          )}
+        </button>
+      </div>
+
+      <div className={`md:block ${navbar ? 'block' : 'hidden'}`}>
+        <ul className='flex flex-col'>
+          {navMenuData.map((menu) => (
+            <Link key={menu.id} href={menu.href}>
+              <li
+                className={`flex justify-center items-center text-white text-lg font-bold tracking-wide rounded-full hover:rotate-[360deg] hover:duration-1000 cursor-pointer mb-4 w-[110px] h-[110px] ${menu.background}`}
+              >
+                {menu.name}
+              </li>
+            </Link>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };
