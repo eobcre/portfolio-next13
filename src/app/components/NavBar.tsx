@@ -39,6 +39,10 @@ const NavBar = () => {
     setNavbar((prev) => !prev);
   };
 
+  const closeNav = () => {
+    setNavbar(false);
+  };
+
   return (
     <nav className='fixed md:top-1/2 md:transform md:-translate-y-1/2 right-0 p-4'>
       <div className='text-right md:hidden'>
@@ -55,8 +59,8 @@ const NavBar = () => {
         <ul className='flex flex-col'>
           {navMenuData.map((menu) => (
             <Link key={menu.id} href={menu.href}>
-              <li
-                className={`flex justify-center items-center text-white text-lg font-bold tracking-wide rounded-full hover:rotate-[360deg] hover:duration-1000 cursor-pointer mb-4 w-[110px] h-[110px] ${menu.background}`}
+              <li onClick={closeNav}
+                className={`flex justify-center items-center text-white text-lg font-bold tracking-wide mt-4 px-6 py-2 rounded-full hover:rotate-[360deg] hover:duration-1000 cursor-pointer md:mb-4 w-[110px] h-[110px] ${menu.background}`}
               >
                 {menu.name}
               </li>
