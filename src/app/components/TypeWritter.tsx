@@ -5,9 +5,14 @@ import { useState, useEffect } from 'react';
 type TypeWritterProps = {
   text: string;
   delay: number;
+  className: string;
 };
 
-const TypeWritter: React.FC<TypeWritterProps> = ({ text, delay }) => {
+const TypeWritter: React.FC<TypeWritterProps> = ({
+  text,
+  delay,
+  className,
+}) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCursorVisible, setIsCursorVisible] = useState(true);
@@ -32,10 +37,10 @@ const TypeWritter: React.FC<TypeWritterProps> = ({ text, delay }) => {
   }, [currentIndex, delay, text]);
 
   return (
-      <span className='hidden pre-md:block custom-text font-bold py-4 pre-md:text-7xl md:text-[5rem] lg:text-8xl 2xl:text-[7rem] 4xl:text-[12rem]'>
-        {currentText}
-        <span className={isCursorVisible ? 'cursor' : ''}>|</span>
-      </span>
+    <span className={className}>
+      {currentText}
+      <span className={isCursorVisible ? 'cursor' : ''}>|</span>
+    </span>
   );
 };
 
