@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 // components
 import TypeWritter from './TypeWritter';
 import TypeWritterMobile from './TypeWritterMobile';
-import SubNavBar from './SubNavBar';
+import IconBar from './IconBar';
 
 const HeroSection = () => {
   const [isFrontendFinished, setIsFrontendFinished] = useState(false);
@@ -31,7 +31,7 @@ const HeroSection = () => {
       {isFrontendFinished && (
         <TypeWritterMobile text='Developer.' delay={200} />
       )}
-      <SubNavBar />
+      <IconBar />
       <div className='text-[#333333] text-7xl font-bold py-4'>
         <p className='mb-2'>Dive into Creativity</p>
         <p className='mb-2'>Lorem Lorem Lorem Lorem</p>
