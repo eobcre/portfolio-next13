@@ -12,24 +12,28 @@ const NavBar = () => {
       name: 'Home',
       href: '/',
       background: 'bg-[#97dffc]',
+      hexagon: 'hexagon-home'
     },
     {
       id: nanoid(),
       name: 'About',
       href: '/about',
       background: 'bg-[#858ae3]',
+      hexagon: 'hexagon-about'
     },
     {
       id: nanoid(),
       name: 'Gallery',
       href: '/gallery',
       background: 'bg-[#613dc1]',
+      hexagon: 'hexagon-gallery'
     },
     {
       id: nanoid(),
       name: 'Contact',
       href: '/contact',
       background: 'bg-[#4e148c]',
+      hexagon: 'hexagon-contact'
     },
   ];
 
@@ -60,7 +64,7 @@ const NavBar = () => {
           {navMenuData.map((menu) => (
             <Link key={menu.id} href={menu.href}>
               <li onClick={closeNav}
-                className={`flex justify-center items-center text-white font-bold tracking-wide mt-4 px-6 py-2 rounded-full hover:rotate-[360deg] hover:duration-1000 cursor-pointer w-[90px] h-[90px] md:text-lg md:mb-4 md:w-[110px] md:h-[110px] ${menu.background}`}
+                className={`hexagon flex justify-center items-center text-white font-bold tracking-wide m-2 px-6 py-2 hover:rotate-[360deg] hover:duration-1000 cursor-pointer md:text-lg md:m-3 ${menu.background} ${menu.hexagon}`}
               >
                 {menu.name}
               </li>
