@@ -1,6 +1,6 @@
 // components
-import HeroSection from './components/HeroSection';
-import Latest from './components/Latest';
+import HeroSection from './components/HeroSection/HeroSection';
+import Latest from './components/HeroSection/Latest';
 
 export default function Home() {
   return (
