@@ -34,10 +34,3 @@
     opacity: 1;
   }
 }
-
-/* hexagon */
-.hexagon {
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  width: 100px;
-  height: 110px;
-}

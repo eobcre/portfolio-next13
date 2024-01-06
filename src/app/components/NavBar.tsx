@@ -64,7 +64,7 @@ const NavBar = () => {
           {navMenuData.map((menu) => (
             <Link key={menu.id} href={menu.href}>
               <li onClick={closeNav}
-                className={`hexagon flex justify-center items-center text-white font-bold tracking-wide m-2 px-6 py-2 hover:rotate-[360deg] hover:duration-1000 cursor-pointer md:text-lg md:m-3 ${menu.background} ${menu.hexagon}`}
+                className={`flex justify-center items-center text-white font-bold tracking-wide rounded-full m-2 px-6 py-2 w-[100px] h-[100px] hover:rotate-[360deg] hover:duration-1000 cursor-pointer md:text-lg md:m-3 ${menu.background} ${menu.hexagon}`}
               >
                 {menu.name}
               </li>
