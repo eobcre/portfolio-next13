@@ -1,14 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 // components
 import TypeWriting from '../TypeWriting';
 import TypeWritingMobile from '../TypeWritingMobile';
 import IconBar from './IconBar';
-
-import Space from '../../assets/background.png';
 
 const HeroSection = () => {
   const [isFrontendFinished, setIsFrontendFinished] = useState(false);
@@ -21,7 +18,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className='flex flex-col pl-4 w-full'>
+    <div className='flex flex-col justify-center pl-4 w-full h-screen'>
       <h1 className='text-white text-4xl font-bold py-4 xs:text-5xl sm:text-5xl md:text-6xl'>
         Hi, I'm Emmy.
       </h1>
@@ -36,7 +33,6 @@ const HeroSection = () => {
       )}
       <IconBar />
       <div className='text-[#333333] text-7xl font-bold py-4'>
-        <Image src={Space} alt='Image' className='w-[1000px]' />
       </div>
     </div>
   );
