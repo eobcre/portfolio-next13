@@ -7,7 +7,7 @@ const IconBar = () => {
   const subNavMenuData = [
     {
       id: nanoid(),
-      icon: <BsLinkedin className='text-white text-3xl' />,
+      icon: <BsLinkedin className='text-white text-2xl' />,
       href: 'https://www.linkedin.com/in/emmymanning',
       target: '_blank',
       rel: 'noopener noreferrer',
@@ -21,8 +21,15 @@ const IconBar = () => {
     },
     {
       id: nanoid(),
-      icon: <HiOutlineMail className='text-white text-4xl' />,
+      icon: <HiOutlineMail className='text-white text-3xl' />,
       href: 'mailto:eobcre@gmail.com',
+    },
+    {
+      id: nanoid(),
+      icon: (
+        <span className='text-white text-xl tracking-wider'>CV</span>
+      ),
+      href: '',
     },
   ];
 
