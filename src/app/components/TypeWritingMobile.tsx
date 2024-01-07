@@ -36,7 +36,7 @@ const TypeWritingMobile: React.FC<TypeWritingProps> = ({ text, delay }) => {
     currentIndex >= 'Frontend'.length && !isFrontendDisplayed;
 
   return (
-    <span className='custom-text text-6xl font-bold py-4 xs:text-8xl pre-md:hidden'>
+    <span className='custom-text text-6xl font-bold py-4 sm:text-[15vw]'>
       {currentText}
       <span className={shouldShowCursor ? 'cursor' : ''}>
         {isCursorVisible ? '|' : ''}
