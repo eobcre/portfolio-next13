@@ -39,7 +39,7 @@ const ScrollObserver: React.FC<ScrollObserverProps> = ({ children, title }) => {
         <TypeWriting
           text={`${title}`}
           delay={200}
-          className='custom-text text-4xl sm:text-6xl font-bold pre-md:text-7xl md:text-[5rem] lg:text-8xl 4xl:text-[12rem]'
+          className='custom-text text-5xl font-bold sm:text-[8vw]'
         />
       ) : null}
       {children}
