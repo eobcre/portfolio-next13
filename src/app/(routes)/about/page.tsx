@@ -5,7 +5,7 @@ import ScrollObserver from '@/app/components/ScrollObserver';
 
 const AboutPage = () => {
   return (
-    <div>
+    <div className='pl-10 py-10'>
       <ScrollObserver title='About .'>
         <></>
       </ScrollObserver>
