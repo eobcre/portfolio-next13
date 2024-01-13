@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react';
 
-type TypeWritterProps = {
+type TypeWritingProps = {
   text: string;
   delay: number;
 };
 
-const TypeWritter: React.FC<TypeWritterProps> = ({ text, delay }) => {
+const TypeWritingMobile: React.FC<TypeWritingProps> = ({ text, delay }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCursorVisible, setIsCursorVisible] = useState(true);
@@ -31,13 +31,18 @@ const TypeWritter: React.FC<TypeWritterProps> = ({ text, delay }) => {
     }
   }, [currentIndex, delay, text]);
 
+  const isFrontendDisplayed = currentText.includes('Developer.');
+  const shouldShowCursor =
+    currentIndex >= 'Frontend'.length && !isFrontendDisplayed;
+
   return (
-    <>
-      <span className='custom-text text-4xl font-bold p-4 min-[970px]:text-7xl'>
-        {currentText}
-        <span className={isCursorVisible ? 'cursor' : ''}>|</span>
+    <span className='custom-text text-6xl font-bold py-4 sm:text-[15vw]'>
+      {currentText}
+      <span className={shouldShowCursor ? 'cursor' : ''}>
+        {isCursorVisible ? '|' : ''}
       </span>
-    </>
+    </span>
   );
 };
-export default TypeWritter;
+
+export default TypeWritingMobile;
