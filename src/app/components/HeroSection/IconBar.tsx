@@ -35,7 +35,7 @@ const IconBar = () => {
 
   return (
     <nav>
-      <ul className='flex gap-5 py-4'>
+      <ul className='flex gap-5 py-10'>
         {subNavMenuData.map((menu) => (
           <Link
             key={menu.id}
