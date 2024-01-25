@@ -24,15 +24,13 @@ const HeroSection = () => {
       <h1 className='text-white text-3xl uppercase font-bold py-4 sm:text-[5vw]'>
         Emmy Manning
       </h1>
-      <div className='min-h-[120px]'>
+      <IconBar />
         <div>
           <TypeWriting text={initialText} delay={200} />
         </div>
         <div>
           {isFrontendFinished && <TypeWriting text={finalText} delay={200} />}
         </div>
-      </div>
-      <IconBar />
     </div>
   );
 };
