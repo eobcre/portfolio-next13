@@ -18,7 +18,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className='flex flex-col justify-center pl-4 py-4 w-full'>
+    <div className='flex flex-col justify-center pl-4 py-6 w-full'>
       <h1 className='text-white text-3xl uppercase font-bold py-4 sm:text-[5vw]'>
         Emmy Manning
       </h1>
