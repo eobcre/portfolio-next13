@@ -3,8 +3,7 @@
 import { useState, useEffect } from 'react';
 
 // components
-// import TypeWriting from '../TypeWriting';
-import TypeWritingMobile from '../TypeWritingMobile';
+import TypeWriting from '../TypeWriting';
 import IconBar from './IconBar';
 
 const HeroSection = () => {
@@ -17,20 +16,22 @@ const HeroSection = () => {
     return () => clearTimeout(frontendTimeout);
   }, []);
 
+  const initialText = 'Frontend';
+  const finalText = 'Developer.';
+
   return (
-    <div className='flex flex-col justify-center pl-4 py-6 w-full'>
+    <div className='flex flex-col pl-4 pb-10 py-6 w-full lg:h-screen'>
       <h1 className='text-white text-3xl uppercase font-bold py-4 sm:text-[5vw]'>
         Emmy Manning
       </h1>
-      {/* <TypeWriting
-        text='Frontend Developer .'
-        delay={200}
-        className='hidden pre-md:block custom-text font-bold py-4 pre-md:text-7xl md:text-[5rem] lg:text-8xl 2xl:text-[7rem] 4xl:text-[12rem]'
-      /> */}
-      <TypeWritingMobile text='Frontend' delay={200} />
-      {isFrontendFinished && (
-        <TypeWritingMobile text='Developer.' delay={200} />
-      )}
+      <div className='min-h-[120px]'>
+        <div>
+          <TypeWriting text={initialText} delay={200} />
+        </div>
+        <div>
+          {isFrontendFinished && <TypeWriting text={finalText} delay={200} />}
+        </div>
+      </div>
       <IconBar />
     </div>
   );
