@@ -21,7 +21,7 @@ const HeroSection = () => {
 
   return (
     <div className='flex flex-col pl-4 pb-10 py-6 w-full lg:h-screen'>
-      <h1 className='text-white text-3xl uppercase font-bold py-4 sm:text-[5vw]'>
+      <h1 className='text-white text-5xl uppercase font-bold py-4 sm:text-[7vw]'>
         Emmy Manning
       </h1>
       <IconBar />
