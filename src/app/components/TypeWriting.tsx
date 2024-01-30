@@ -5,14 +5,9 @@ import { useState, useEffect } from 'react';
 type TypeWritingProps = {
   text: string;
   delay: number;
-  className: string;
 };
 
-const TypeWriting: React.FC<TypeWritingProps> = ({
-  text,
-  delay,
-  className,
-}) => {
+const TypeWriting: React.FC<TypeWritingProps> = ({ text, delay }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCursorVisible, setIsCursorVisible] = useState(true);
@@ -36,10 +31,16 @@ const TypeWriting: React.FC<TypeWritingProps> = ({
     }
   }, [currentIndex, delay, text]);
 
+  const isFrontendDisplayed = currentText.includes('Developer.');
+  const shouldShowCursor =
+    currentIndex >= 'Frontend'.length && !isFrontendDisplayed;
+
   return (
-    <span className={className}>
+    <span className='custom-text text-6xl font-bold sm:text-[15vw]'>
       {currentText}
-      <span className={isCursorVisible ? 'cursor' : ''}>|</span>
+      <span className={shouldShowCursor ? 'cursor' : ''}>
+        {isCursorVisible ? '|' : ''}
+      </span>
     </span>
   );
 };

@@ -26,16 +26,14 @@ const IconBar = () => {
     },
     {
       id: nanoid(),
-      icon: (
-        <span className='text-white text-xl tracking-wider'>CV</span>
-      ),
+      icon: <span className='text-white text-xl tracking-wider'>CV</span>,
       href: '',
     },
   ];
 
   return (
-    <nav>
-      <ul className='flex gap-5 py-4'>
+    <div className='pt-4 pb-16 lg:pt-1'>
+      <ul className='flex gap-5'>
         {subNavMenuData.map((menu) => (
           <Link
             key={menu.id}
@@ -49,7 +47,7 @@ const IconBar = () => {
           </Link>
         ))}
       </ul>
-    </nav>
+    </div>
   );
 };
 
