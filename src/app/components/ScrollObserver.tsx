@@ -34,14 +34,8 @@ const ScrollObserver: React.FC<ScrollObserverProps> = ({ children, title }) => {
   }, [documentRef]);
 
   return (
-    <div ref={documentRef}>
-      {visible ? (
-        <TypeWriting
-          text={`${title}`}
-          delay={200}
-          className='custom-text text-5xl font-bold sm:text-[8vw]'
-        />
-      ) : null}
+    <div ref={documentRef} className='pb-20'>
+      {visible ? <TypeWriting text={`${title}`} delay={200} /> : null}
       {children}
     </div>
   );
