@@ -2,9 +2,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
-// components
-import TypeWriting from './TypeWriting';
-
 type ScrollObserverProps = {
   children: React.ReactNode;
   title: string;
@@ -35,7 +32,7 @@ const ScrollObserver: React.FC<ScrollObserverProps> = ({ children, title }) => {
 
   return (
     <div ref={documentRef} className='pb-20'>
-      {visible ? <TypeWriting text={`${title}`} delay={200} /> : null}
+      {/* {visible ? : null} */}
       {children}
     </div>
   );
