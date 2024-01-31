@@ -31,14 +31,19 @@ const TypeWriting: React.FC<TypeWritingProps> = ({ text, delay }) => {
     }
   }, [currentIndex, delay, text]);
 
-  const isFrontendDisplayed = currentText.includes('Developer.');
-  const shouldShowCursor =
-    currentIndex >= 'Frontend'.length && !isFrontendDisplayed;
+  // words includes developer, gallery, contact are true
+  const isFrontendDisplayed =
+    currentText.includes('Developer.') ||
+    currentText.includes('Gallery.') ||
+    currentText.includes('Contact.');
+
+  // isFrontendDisplayed false
+  const showCursor = !isFrontendDisplayed;
 
   return (
     <span className='custom-text text-6xl font-bold sm:text-[15vw]'>
       {currentText}
-      <span className={shouldShowCursor ? 'cursor' : ''}>
+      <span className={showCursor ? 'cursor' : ''}>
         {isCursorVisible ? '|' : ''}
       </span>
     </span>
