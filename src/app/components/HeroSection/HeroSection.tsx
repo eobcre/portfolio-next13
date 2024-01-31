@@ -16,16 +16,15 @@ const HeroSection = () => {
     return () => clearTimeout(frontendTimeout);
   }, []);
 
-  const initialText = 'Frontend';
-  const finalText = 'Developer.';
-
   return (
-    <div className='flex flex-col pl-4 py-10 w-full'>
+    <div className='flex flex-col pl-4 py-10'>
       <h1 className='text-white text-3xl uppercase font-bold pb-4 sm:text-[5vw]'>
         Emmy Manning
       </h1>
-      <TypeWriting text={initialText} delay={200} />
-      {isFrontendFinished && <TypeWriting text={finalText} delay={200} />}
+      <div className='flex flex-col h-[30vw]'>
+        <TypeWriting text='Frontend' delay={200} />
+        {isFrontendFinished && <TypeWriting text='Developer.' delay={200} />}
+      </div>
       <IconBar />
     </div>
   );

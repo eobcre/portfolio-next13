@@ -7,7 +7,7 @@ const ContactPage = () => {
   return (
     <div className='px-10 py-20 w-full md:pl-10 md:pr-48'>
       <TypeWriting text='Contact.' delay={200} />
-      <div className='pt-20'>
+      <div className='pt-20 xl:px-36'>
         <h1 className='custom-text text-5xl font-bold sm:text-[8vw]'>
           Say Hello.
         </h1>
