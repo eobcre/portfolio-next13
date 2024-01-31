@@ -1,9 +1,10 @@
+import React from 'react'
 import Link from 'next/link';
 import { nanoid } from 'nanoid';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 
-const IconBar = () => {
+const IconBar = React.memo(() => {
   const subNavMenuData = [
     {
       id: nanoid(),
@@ -49,6 +50,6 @@ const IconBar = () => {
       </ul>
     </div>
   );
-};
+});
 
 export default IconBar;
