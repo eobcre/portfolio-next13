@@ -1,14 +1,12 @@
 'use client';
 
 // components
-import ScrollObserver from '@/app/components/ScrollObserver';
+import TypeWriting from '@/app/components/TypeWriting';
 
 const GalleryPage = () => {
   return (
     <div className='pl-10 py-10'>
-      <ScrollObserver title='Gallery.'>
-        <></>
-      </ScrollObserver>
+      <TypeWriting text='Gallery.' delay={200} />
     </div>
   );
 };
