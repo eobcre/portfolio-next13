@@ -34,6 +34,7 @@ const TypeWriting: React.FC<TypeWritingProps> = ({ text, delay }) => {
   // words includes developer, gallery, contact are true
   const isFrontendDisplayed =
     currentText.includes('Developer.') ||
+    currentText.includes('About.') ||
     currentText.includes('Gallery.') ||
     currentText.includes('Contact.');
 
