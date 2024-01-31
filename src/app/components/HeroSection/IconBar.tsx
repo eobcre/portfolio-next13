@@ -52,4 +52,7 @@ const IconBar = React.memo(() => {
   );
 });
 
+// display name
+IconBar.displayName = 'IconBar';
+
 export default IconBar;
