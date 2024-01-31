@@ -33,21 +33,21 @@ const NavBar = () => {
     },
   ];
 
-  const [navbar, setNavbar] = useState(false);
+  const [isNavOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => {
-    setNavbar((prev) => !prev);
+    setNavOpen((prev) => !prev);
   };
 
   const closeNav = () => {
-    setNavbar(false);
+    setNavOpen(false);
   };
 
   return (
     <nav className='fixed md:top-1/2 md:transform md:-translate-y-1/2 right-0 p-4'>
       <div className='text-right pt-2 md:hidden'>
         <button onClick={toggleNav}>
-          {navbar ? (
+          {isNavOpen ? (
             <RiCloseLine className='text-white border-2 border-white rounded-full hover:rotate-[360deg] hover:duration-1000 w-[50px] h-[50px] p-2' />
           ) : (
             <RiMenu3Line className='text-white border-2 border-white rounded-full hover:rotate-[360deg] hover:duration-1000 w-[50px] h-[50px] p-3' />
@@ -55,7 +55,7 @@ const NavBar = () => {
         </button>
       </div>
 
-      <div className={`md:block ${navbar ? 'block' : 'hidden'}`}>
+      <div className={`md:block ${isNavOpen ? 'block' : 'hidden'}`} >
         <ul className='flex flex-col'>
           {navMenuData.map((menu) => (
             <Link key={menu.id} href={menu.href}>
