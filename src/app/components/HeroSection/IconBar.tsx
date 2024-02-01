@@ -1,41 +1,13 @@
 import React from 'react'
 import Link from 'next/link';
-import { nanoid } from 'nanoid';
-import { BsLinkedin, BsGithub } from 'react-icons/bs';
-import { HiOutlineMail } from 'react-icons/hi';
+import { getIconBarData } from '@/app/data/data';
 
 const IconBar = React.memo(() => {
-  const subNavMenuData = [
-    {
-      id: nanoid(),
-      icon: <BsLinkedin className='text-white text-2xl' />,
-      href: 'https://www.linkedin.com/in/emmymanning',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
-      id: nanoid(),
-      icon: <BsGithub className='text-white text-3xl' />,
-      href: 'https://github.com/eobcre',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
-      id: nanoid(),
-      icon: <HiOutlineMail className='text-white text-3xl' />,
-      href: 'mailto:eobcre@gmail.com',
-    },
-    {
-      id: nanoid(),
-      icon: <span className='text-white text-xl tracking-wider'>CV</span>,
-      href: '',
-    },
-  ];
 
   return (
     <div className='pt-4 pb-16 lg:pt-1'>
       <ul className='flex gap-5'>
-        {subNavMenuData.map((menu) => (
+        {getIconBarData().map((menu) => (
           <Link
             key={menu.id}
             href={menu.href}

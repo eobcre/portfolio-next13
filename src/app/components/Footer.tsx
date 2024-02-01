@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { getFooterNavData } from '../data/footerData';
-import { getFooterIconData } from '../data/footerData';
+import { getFooterNavData } from '../data/data';
+import { getFooterIconData } from '../data/data';
 
 const Footer = () => {
   return (
