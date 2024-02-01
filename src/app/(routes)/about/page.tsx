@@ -5,7 +5,7 @@ import TypeWriting from '@/app/components/TypeWriting';
 
 const AboutPage = () => {
   return (
-    <div className='px-10 py-20 md:pl-10 w-full md:pr-48'>
+    <div className='px-10 py-20 md:pl-10 w-full min-h-screen md:pr-48'>
       <TypeWriting text='About.' delay={200} />
       <div className='xl:px-36'>
         <div className='pt-20'>
