@@ -2,37 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { nanoid } from 'nanoid';
+import { getNavData } from '../data/data';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
 const NavBar = () => {
-  const navMenuData = [
-    {
-      id: nanoid(),
-      name: 'Home',
-      href: '/',
-      background: 'bg-[#97dffc]',
-    },
-    {
-      id: nanoid(),
-      name: 'About',
-      href: '/about',
-      background: 'bg-[#858ae3]',
-    },
-    {
-      id: nanoid(),
-      name: 'Gallery',
-      href: '/gallery',
-      background: 'bg-[#613dc1]',
-    },
-    {
-      id: nanoid(),
-      name: 'Contact',
-      href: '/contact',
-      background: 'bg-[#4e148c]',
-    },
-  ];
-
   const [isNavOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => {
@@ -57,7 +30,7 @@ const NavBar = () => {
 
       <div className={`md:block ${isNavOpen ? 'block' : 'hidden'}`} >
         <ul className='flex flex-col'>
-          {navMenuData.map((menu) => (
+          {getNavData().map((menu) => (
             <Link key={menu.id} href={menu.href}>
               <li
                 onClick={closeNav}
