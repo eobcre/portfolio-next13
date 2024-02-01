@@ -10,7 +10,7 @@ const Footer = () => {
       </p>
       <div className='flex gap-5 mr-10'>
         {getFooterNavData().map((nav) => (
-          <Link href={nav.href} className={nav.style}>
+          <Link key={nav.id} href={nav.href} className={nav.style}>
             <p>{nav.name}</p>
           </Link>
         ))}
