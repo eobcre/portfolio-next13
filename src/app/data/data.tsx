@@ -69,28 +69,28 @@ export function getFooterNavData() {
       id: nanoid(),
       name: 'About',
       href: '/about',
-      style: 'hover:border-[#97dffc] hover:border-b-2 hover:duration-200',
+      style: 'hover:text-[#97dffc] hover:duration-200',
       line: '|',
     },
     {
       id: nanoid(),
       name: 'Gallery',
       href: '/gallery',
-      style: 'hover:border-[#97dffc] hover:border-b-2 hover:duration-200',
+      style: 'hover:text-[#97dffc] hover:duration-200',
       line: '|',
     },
     {
       id: nanoid(),
       name: 'Contact',
       href: '/contact',
-      style: 'hover:border-[#97dffc] hover:border-b-2 hover:duration-200',
+      style: 'hover:text-[#97dffc] hover:duration-200',
       line: '|',
     },
     {
       id: nanoid(),
       name: 'Resume',
       href: './',
-      style: 'hover:border-[#97dffc] hover:border-b-2 hover:duration-200',
+      style: 'hover:text-[#97dffc] hover:duration-200',
     },
   ];
 }
@@ -100,21 +100,21 @@ export function getFooterIconData() {
   return [
     {
       id: nanoid(),
-      icon: <BsLinkedin className='text-xl text-white' />,
+      icon: <BsLinkedin className='text-xl text-white hover:text-[#97dffc] hover:duration-200' />,
       href: 'https://www.linkedin.com/in/emmymanning',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
       id: nanoid(),
-      icon: <BsGithub className='text-white text-xl' />,
+      icon: <BsGithub className='text-white text-xl hover:text-[#97dffc] hover:duration-200' />,
       href: 'https://github.com/eobcre',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
       id: nanoid(),
-      icon: <HiOutlineMail className='text-white text-2xl' />,
+      icon: <HiOutlineMail className='text-white text-2xl hover:text-[#97dffc] hover:duration-200' />,
       href: 'mailto:eobcre@gmail.com',
     },
   ];
