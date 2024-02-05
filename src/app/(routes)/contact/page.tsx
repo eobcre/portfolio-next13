@@ -4,6 +4,9 @@
 import TypeWriting from '@/app/components/TypeWriting';
 
 const ContactPage = () => {
+  const inputStyle = 'rounded-md outline-none p-4 w-full';
+  const textareaStyle = 'rounded-md outline-none resize-none mt-6 p-4 w-full'
+
   return (
     <div className='px-10 py-20 w-full min-h-screen md:pl-10 md:pr-48'>
       <TypeWriting text='Contact.' delay={200} />
@@ -17,14 +20,14 @@ const ContactPage = () => {
             id='name'
             name='name'
             placeholder='Name'
-            className='rounded-md outline-none mt-10 p-4 w-full'
+            className={`mt-10 ${inputStyle}`}
           />
           <input
             type='email'
             id='email'
             name='email'
             placeholder='Email'
-            className='rounded-md outline-none mt-6 p-4 w-full'
+            className={`mt-6 ${inputStyle}`}
           />
           <textarea
             name=''
@@ -32,7 +35,7 @@ const ContactPage = () => {
             cols={30}
             rows={10}
             placeholder='Message'
-            className='rounded-md outline-none resize-none mt-6 p-4 w-full'
+            className={textareaStyle}
           ></textarea>
         </div>
       </div>
