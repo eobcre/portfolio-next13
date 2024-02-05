@@ -8,6 +8,8 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 const NavBar = () => {
   const [isNavOpen, setNavOpen] = useState(false);
 
+  const navButtonStyle = 'text-white border-2 border-white rounded-full hover:rotate-[360deg] hover:duration-1000 w-[50px] h-[50px]';
+
   const toggleNav = () => {
     setNavOpen((prev) => !prev);
   };
@@ -21,9 +23,9 @@ const NavBar = () => {
       <div className='text-right pt-2 md:hidden'>
         <button onClick={toggleNav}>
           {isNavOpen ? (
-            <RiCloseLine className='text-white border-2 border-white rounded-full hover:rotate-[360deg] hover:duration-1000 w-[50px] h-[50px] p-2' />
+            <RiCloseLine className={`p-2 ${navButtonStyle}`} />
           ) : (
-            <RiMenu3Line className='text-white border-2 border-white rounded-full hover:rotate-[360deg] hover:duration-1000 w-[50px] h-[50px] p-3' />
+            <RiMenu3Line className={`p-3 ${navButtonStyle}`} />
           )}
         </button>
       </div>
