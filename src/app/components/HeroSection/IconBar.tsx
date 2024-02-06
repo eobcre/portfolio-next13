@@ -5,7 +5,7 @@ import { getIconBarData } from '@/app/data/data';
 const IconBar = React.memo(() => {
 
   return (
-    <div className='pt-4 pb-16 lg:pt-1'>
+    <div className='pt-4 pb-16 z-10 lg:pt-1'>
       <ul className='flex gap-5'>
         {getIconBarData().map((menu) => (
           <Link

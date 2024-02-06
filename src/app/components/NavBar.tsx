@@ -19,7 +19,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className='fixed md:top-1/2 md:transform md:-translate-y-1/2 right-0 p-4'>
+    <nav className='fixed z-50 md:top-1/2 md:transform md:-translate-y-1/2 right-0 p-4'>
       <div className='text-right pt-2 md:hidden'>
         <button onClick={toggleNav}>
           {isNavOpen ? (
