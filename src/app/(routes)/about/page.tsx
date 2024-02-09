@@ -15,8 +15,22 @@ const AboutPage = () => {
         <div className='pt-20'>
           <h1 className={h1Style}>Me.</h1>
           <div className={divStyle}>
-            <div className='p-14'>
-              <p className='text-gray-300'></p>
+            <div className='flex flex-col gap-6 md:p-14'>
+              <p className='text-2xl text-gray-300'>
+                Frontend Developer based in Beaver, PA.
+              </p>
+              <p className='text-gray-300'>
+                Fast-forward to the present, I've had the privilege of leading a
+                Frontend Developer internship at a startup specializing in web
+                development. I began my journey in the industry as a software
+                tester, navigated through map alignment, and contributed to
+                developing medical surveys. I'm always passionate about creative
+                coding and curious about learning new technologies!
+              </p>
+              <p className='text-gray-300'>
+                During my time away from the computer, I'm usually reading,
+                cooking and enjoying a coffee at cafe.
+              </p>
             </div>
           </div>
         </div>
