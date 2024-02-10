@@ -11,7 +11,7 @@ type Experience = {
   position?: string;
   description: string;
   tech?: string[] | string;
-}
+};
 
 const AboutPage = () => {
   const divStyle =
@@ -27,7 +27,7 @@ const AboutPage = () => {
           {/* Me */}
           <div className={divStyle}>
             <div className='flex flex-col gap-6 md:p-14'>
-              <p className='text-2xl text-gray-300'>
+              <p className='text-2xl custom-text font-bold'>
                 Frontend Developer based in Beaver, PA.
               </p>
               <p className='text-gray-300'>
