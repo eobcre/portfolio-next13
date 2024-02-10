@@ -1,7 +1,17 @@
 'use client';
 
-// components
+import { getMyExperience } from '@/app/data/data';
+
 import TypeWriting from '@/app/components/TypeWriting';
+
+type Experience = {
+  id: string;
+  date: string;
+  name: string;
+  position?: string;
+  description: string;
+  tech?: string[] | string;
+}
 
 const AboutPage = () => {
   const divStyle =
@@ -14,6 +24,7 @@ const AboutPage = () => {
       <div className='xl:px-36'>
         <div className='pt-20'>
           <h1 className={h1Style}>Me.</h1>
+          {/* Me */}
           <div className={divStyle}>
             <div className='flex flex-col gap-6 md:p-14'>
               <p className='text-2xl text-gray-300'>
@@ -34,9 +45,35 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
+        {/* Experience */}
         <div className='pt-20'>
           <h1 className={h1Style}>Experience</h1>
-          <div className={divStyle}></div>
+          {getMyExperience().map((me: Experience) => (
+            <div key={me.id} className={`md:p-24 ${divStyle}`}>
+              <span className='text-sm text-gray-300'>{me.date}</span>
+              <p className='custom-text font-bold'>{me.name}</p>
+              <p className='text-gray-500'>{me.position}</p>
+              <p className='text-gray-300 mt-4'>{me.description}</p>
+              {me.tech && me.tech.length > 0 && (
+                <div className='flex flex-wrap gap-4 custom-tag-text text-sm mt-6'>
+                  {Array.isArray(me.tech) ? (
+                    me.tech.map((tech, index) => (
+                      <span
+                        key={index}
+                        className='border border-blue-300 rounded-3xl px-3 py-2'
+                      >
+                        {tech}
+                      </span>
+                    ))
+                  ) : (
+                    <span className='border border-blue-300 rounded-3xl px-3 py-2'>
+                      {me.tech}
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
