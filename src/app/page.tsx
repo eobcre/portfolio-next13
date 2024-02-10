@@ -1,12 +1,12 @@
 // components
 import HeroSection from './components/HeroSection/HeroSection';
-import Latest from './components/HeroSection/Latest';
+import Repos from './components/HeroSection/Repos';
 
 export default function Home() {
   return (
     <main className='w-full'>
       <HeroSection />
-      <Latest />
+      <Repos />
     </main>
   );
 }
