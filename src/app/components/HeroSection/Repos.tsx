@@ -1,7 +1,7 @@
 // Latest.jsx
 import React from 'react';
 
-const Latest = () => {
+const Repos = () => {
   const h1Style='custom-text text-5xl font-bold sm:text-[8vw]'
 
   return (
@@ -16,4 +16,4 @@ const Latest = () => {
   );
 };
 
-export default Latest;
+export default Repos;
