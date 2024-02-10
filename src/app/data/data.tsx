@@ -70,10 +70,7 @@ export function getMyExperience() {
       date: '2023 Oct - Present',
       name: 'Frontend Developer SDE Internship',
       position: 'Frontend Team Lead',
-      description: `I have created a cutting-edge beauty platform dedicated to
-    providing accessible plastic surgery services for beauty
-    enthusiasts. Our team is highly focused on website development,
-    ensuring a seamless and user-friendly experience for the users.`,
+      description: `Created a cutting-edge beauty platform dedicated to providing accessible plastic surgery services for beauty enthusiasts. Our team is highly focused on website development, ensuring a seamless and user-friendly experience for the users. My leadership involved guiding the team in implementing innovative design solutions, optimizing user interfaces, and enhancing overall user experience. The experience has honed my skills in frontend development, project management, and fostering a collaborative team environment.`,
       tech: [
         'JavaScript',
         'React.js',
@@ -90,20 +87,20 @@ export function getMyExperience() {
       date: '2021 Jul - 2021 Oct',
       name: 'Web Developer',
       position: 'Job Training',
-      description: ``,
+      description: `Made significant contributions to the creation of medical surveys. As part of the team, I conducted peer reviews to meticulously verify the accuracy of the applications we were working on. Additionally, I engaged in the integration process, leveraging the use of company-specific widgets and seamlessly incorporating them into the codebase. This multifaceted involvement allowed me to not only ensure the precision of our medical surveys but also showcase adaptability in utilizing specialized tools for optimal results within the company's framework.`,
       tech: ['JavaScript', 'HTML & CSS'],
     },
     {
       id: nanoid(),
       date: '2019 Apr - 2020 Oct',
       name: 'Map Alignment Specialist',
-      description: ``,
+      description: `Contributed transit map information for Google Maps, using the platform's tools to boost accuracy. Conducting thorough research on subway and bus routes, I utilized Google Maps tools to ensure precision. In my role as a map alignment specialist, I provided precise location information, optimizing the overall functionality of Google Maps.`,
     },
     {
       id: nanoid(),
       date: '2018 Oct - 2019 Mar',
       name: 'Software Tester',
-      description: ``,
+      description: `First job in the IT industry, where I conducted testing for car navigation systems. I performed detailed and precise tests, eventually compiling the findings into documents. The testing involved using equipment embedded with navigation software and conducting tests on actual car navigation systems. It provided hands-on experience in assessing the functionality of navigation software both in simulated setups and within real vehicles.`,
     },
   ];
 }
