@@ -5,13 +5,13 @@ import { getFooterIconData } from '../data/data';
 const Footer = () => {
   return (
     <footer className='bg-[#0D1225] flex justify-center text-gray-300 text-sm px-6 py-10 w-full'>
-      <div className='flex flex-col sm:flex-row'>
+      <div className='flex flex-col lg:flex-row'>
         <div className='mb-1'>
           <p className='mr-10'>
             &copy; {new Date().getFullYear()} Emmy Manning All Rights Reserved.
           </p>
         </div>
-        <div className='sm:flex'>
+        <div className='lg:flex'>
           <div className='flex gap-5 mb-2 mr-10'>
             {getFooterNavData().map((nav) => (
               <Link key={nav.id} href={nav.href} className={nav.style}>
