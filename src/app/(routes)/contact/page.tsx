@@ -1,6 +1,7 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 // components
 import TypeWriting from '@/app/components/TypeWriting';
@@ -22,8 +23,18 @@ const ContactPage = () => {
     mode: 'onChange',
   });
 
-  const onSubmit = (data: Form) => {
+  // submit form
+  const onSubmit = async (data: Form) => {
     console.log(data);
+
+    await fetch('/api/email', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        message: data.message,
+      }),
+    });
   };
 
   // style
